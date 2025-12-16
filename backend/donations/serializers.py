@@ -1,4 +1,8 @@
 from rest_framework import serializers
-# from .models import # Add your models here
+from .models import Donation
 
-# Create your serializers here.
+
+class DonationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Donation
+        fields = '__all__'
