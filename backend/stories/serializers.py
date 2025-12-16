@@ -1,4 +1,9 @@
 from rest_framework import serializers
-# from .models import # Add your models here
+from .models import Story 
+# Create your serializers here.  
+class StorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Story
+        fields = '__all__'
 
-# Create your serializers here.
+
