@@ -1,4 +1,7 @@
 from rest_framework import serializers
-# from .models import # Add your models here
+from .models import Partner
 
-# Create your serializers here.
+class PartnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partner
+        fields = '__all__'
