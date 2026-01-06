@@ -5,7 +5,7 @@ import { Upload, Image, FileText, CheckCircle, X, Trash2, Star, Check } from 'lu
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 
-export function Donate() {
+function Donate() {
   const { user, isAdmin } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('posts');
@@ -462,3 +462,5 @@ export function Donate() {
     </div>
   );
 }
+
+export default Donate;

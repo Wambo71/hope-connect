@@ -2,7 +2,7 @@ import { ArrowRight, Target, Users, TrendingUp, CheckCircle } from 'lucide-react
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
-export function HomePage() {
+ function HomePage() {
   const partners = [
     { name: 'UNHCR', logo: 'UN Refugee Agency' },
     { name: 'IRC', logo: 'International Rescue Committee' },
@@ -158,3 +158,5 @@ export function HomePage() {
     </div>
   );
 }
+
+export default HomePage;

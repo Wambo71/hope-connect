@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 
 
-export function ReviewsPage() {
+function ReviewsPage() {
   const { user } = useAuth();
   const [showForm, setShowForm] = useState(false);
   const [reviews, setReviews] = useState([]);
@@ -21,6 +21,13 @@ export function ReviewsPage() {
 
   const averageRating = reviews.length > 0 ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length : 0;
   const totalReviews = reviews.length;
+
+  useEffect(() => {
+    fetch('http://localhost:8001/api/reviews/')
+      .then(response => response.json())
+      .then(data => setReviews(data))
+      .catch(error => console.error('Error fetching reviews:', error));
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -252,3 +259,5 @@ export function ReviewsPage() {
     </div>
   );
 }
+
+export default ReviewsPage;

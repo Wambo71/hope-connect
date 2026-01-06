@@ -5,7 +5,7 @@ import { Upload, Image, FileText, CheckCircle, X, Trash2, Star, Check } from 'lu
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 
-export function AdminDashboard() {
+ function AdminDashboard() {
   const { user, isAdmin } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('posts');
@@ -462,3 +462,4 @@ export function AdminDashboard() {
     </div>
   );
 }
+export default AdminDashboard;

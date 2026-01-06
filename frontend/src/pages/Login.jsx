@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Mail, Lock, User } from 'lucide-react';
 
-export function LoginPage() {
+ function LoginPage() {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -165,3 +165,5 @@ export function LoginPage() {
     </div>
   );
 }
+
+export default LoginPage;
